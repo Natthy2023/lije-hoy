@@ -1,0 +1,141 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(to bottom, #f0f9ff, #ffffff, #f0f9ff);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Selection styles */
+::selection {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Utility classes */
+.container-tight {
+  @apply max-w-5xl mx-auto px-4;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent;
+}
+
+.gradient-button {
+  @apply px-8 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-semibold hover:shadow-lg transition-all;
+}
+
+.card-hover {
+  @apply hover:shadow-xl hover:scale-105 transition-all duration-300;
+}
+
+/* Animation utilities */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive text */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+    color: #ecf0f1;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

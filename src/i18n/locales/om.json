@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Muka",
+    "about": "Waa'ee",
+    "donate": "Kennaa",
+    "language": "Afaan"
+  },
+  "home": {
+    "title": "Ijaarsa Ijoollee",
+    "subtitle": "Abdii fi midhaan gaaraa kennaa",
+    "description": "Ijoollee baajaj keessa jiraniif walitu dhufu dhufa jidhee caraa fedhiinaa",
+    "cta": "Kennaa Jalqaba",
+    "stats": {
+      "children": "Ijoollee Gargaaraa",
+      "donors": "Kennaan Kunuunsa",
+      "impact": "Jidhee Yeroo Bahe"
+    },
+    "impact": {
+      "title": "Yeroo Kee Barbaada",
+      "desc": "Kennaa hundaa jijjira dhugaa nida uumaa"
+    }
+  },
+  "about": {
+    "title": "Waa'ee Lije Hoye",
+    "mission": "Kaayyoon Kee Miidhaa",
+    "missionDesc": "Kennaan fedhiin ijoollee baajaj keessa jiraaniif walitu dhufu kennaa barnootaa fi fayyaa",
+    "vision": "Ilaalcha Kee",
+    "visionDesc": "Addunyaa barumsa ijoollee hundaa argachuuf abdii lammiilee nyaata",
+    "values": {
+      "compassion": "Araara",
+      "transparency": "Gargaarsa",
+      "trust": "Amanaan",
+      "empowerment": "Dandeettii"
+    }
+  },
+  "donate": {
+    "title": "Jijjira Yeroo Fiduun",
+    "subtitle": "Kennaa haala garaa kee isa barbaadu filadhu",
+    "selectAmount": "Kennaa Miira",
+    "recurring": "Yeroo hunda godhi",
+    "monthly": "Jiidha",
+    "once": "Tokko",
+    "tiers": {
+      "tier1": "Nyaata Gargaara",
+      "tier1Desc": "Nyaata midhaan jidha",
+      "tier2": "Barumsa Seena",
+      "tier2Desc": "Meeshaa barnootaa kennaa",
+      "tier3": "Gargaarsa Fayyaa",
+      "tier3Desc": "Seenaa fayyaa fi dandeettii",
+      "tier4": "Gargaarsa Guutuu",
+      "tier4Desc": "Gargaarsa jiidha guutuu"
+    },
+    "proceedCheckout": "Gargaaraa Fudhaa",
+    "or": "Yookiin"
+  },
+  "footer": {
+    "description": "Jidhee midhaan kennaa dhufa jijjira",
+    "quickLinks": "Geesaa Harva",
+    "contact": "Walitu Dhufu",
+    "email": "hello@lijehoy.org",
+    "rights": "Midhaa hundaa ta'e"
+  },
+  "common": {
+    "loading": "Har'aa Jiraa",
+    "error": "Dogongora Ta'e",
+    "retry": "Irra Deebi'u",
+    "learnMore": "Barumsuu Dabalee Gabu",
+    "donate": "Kennaa",
+    "back": "Duraa"
+  }
+}

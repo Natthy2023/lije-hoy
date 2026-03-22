@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "donate": "Donate",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Support a Child",
+    "subtitle": "Give hope and a brighter future",
+    "description": "Connect with children in need and transform their lives through your compassion",
+    "cta": "Start Donating",
+    "stats": {
+      "children": "Children Helped",
+      "donors": "Active Donors",
+      "impact": "Lives Transformed"
+    },
+    "impact": {
+      "title": "Your Impact Matters",
+      "desc": "Every donation creates real change"
+    }
+  },
+  "about": {
+    "title": "About ልጄ ሆይ",
+    "mission": "Our Mission",
+    "missionDesc": "To connect compassionate donors with children in need across Africa, providing education, healthcare, and hope for a brighter future.",
+    "vision": "Our Vision",
+    "visionDesc": "A world where every child has access to education, healthcare, and the opportunity to achieve their dreams.",
+    "values": {
+      "compassion": "Compassion",
+      "transparency": "Transparency",
+      "trust": "Trust",
+      "empowerment": "Empowerment"
+    }
+  },
+  "donate": {
+    "title": "Make a Difference",
+    "subtitle": "Choose a donation amount that fits your heart",
+    "selectAmount": "Select Amount",
+    "recurring": "Make it recurring",
+    "monthly": "Monthly",
+    "once": "One Time",
+    "tiers": {
+      "tier1": "Help Feed",
+      "tier1Desc": "Provides nutritious meals for a month",
+      "tier2": "Enable Learning",
+      "tier2Desc": "School supplies and educational materials",
+      "tier3": "Healthcare Support",
+      "tier3Desc": "Medical check-ups and essential care",
+      "tier4": "Full Support",
+      "tier4Desc": "Comprehensive monthly support"
+    },
+    "proceedCheckout": "Proceed to Checkout",
+    "or": "or"
+  },
+  "footer": {
+    "description": "Transforming lives through compassion and education",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "email": "hello@lijehoy.org",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "learnMore": "Learn More",
+    "donate": "Donate",
+    "back": "Back"
+  }
+}

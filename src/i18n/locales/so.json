@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Guriga",
+    "about": "Saabta",
+    "donate": "Bixinta",
+    "language": "Luqadda"
+  },
+  "home": {
+    "title": "Caawinta Carruur",
+    "subtitle": "Soo jeedin amal iyo caasimad",
+    "description": "Xiriir la xira carruur uu baahan yahay oo degganka ah, iyagoo isaga bixiyey hoos lagu kaydiyay",
+    "cta": "Bixi Billow",
+    "stats": {
+      "children": "Carruur la Caawiyay",
+      "donors": "Bixiyeyaal Saf ah",
+      "impact": "Nolosh la Berraberreyey"
+    },
+    "impact": {
+      "title": "Saameynta Aad",
+      "desc": "Bixin kasta ayaa keenaya isbeddel dhab ah"
+    }
+  },
+  "about": {
+    "title": "Saabta Lije Hoye",
+    "mission": "Ujeedada",
+    "missionDesc": "In la xidhiidho bixiyeyaal naxariista leh oo carruur baahan oo Afrika ka jira, iyaga oo siisa waxbarashada, caafimaadka, iyo amal",
+    "vision": "Aragti",
+    "visionDesc": "Adduunyo ay carruur kasta ay siinayso waxbarashada, caafimaadka, iyo fursadda ay raacaan riyada",
+    "values": {
+      "compassion": "Naxaariista",
+      "transparency": "Caddaalad",
+      "trust": "Isku halleyn",
+      "empowerment": "Awood siinta"
+    }
+  },
+  "donate": {
+    "title": "Keena Isbeddel",
+    "subtitle": "Dooro hadda bixinta ku habeysa qalbigaaga",
+    "selectAmount": "Dooro Hadda",
+    "recurring": "Habeeye oo joogta",
+    "monthly": "Bishii",
+    "once": "Hal mar",
+    "tiers": {
+      "tier1": "Caawin Cuntada",
+      "tier1Desc": "Cuntada macaluulka ah bishan",
+      "tier2": "Bilow Barashada",
+      "tier2Desc": "Alaabta barashada iyo materjaalka",
+      "tier3": "Caawinta Caafimaadka",
+      "tier3Desc": "Hubinta caafimaadka iyo dhawr",
+      "tier4": "Caawinta Buuxa",
+      "tier4Desc": "Caawinta bushooska ah"
+    },
+    "proceedCheckout": "Gudub Baydhiga",
+    "or": "Ama"
+  },
+  "footer": {
+    "description": "Lagu beddelaya noloshada naxaariista iyo barashada",
+    "quickLinks": "Isqaybinta Degdega",
+    "contact": "Xidhiidh",
+    "email": "hello@lijehoy.org",
+    "rights": "Dhammaan xuquuqda ay ilaaliyeen"
+  },
+  "common": {
+    "loading": "Lagu soo raadaya",
+    "error": "Qaldan wax taagan",
+    "retry": "Isku day dib",
+    "learnMore": "Isbaara dheeraad ah",
+    "donate": "Bixi",
+    "back": "Hore"
+  }
+}

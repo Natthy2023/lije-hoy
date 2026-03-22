@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "ቤት",
+    "about": "ስለ ሙያ",
+    "donate": "ለመርዳት",
+    "language": "ቋንቋ"
+  },
+  "home": {
+    "title": "ልጄ ይርዳ",
+    "subtitle": "ተስፋ እና ብሩህ ወደፊት ይስጡ",
+    "description": "ከስጋት ለሚሊሙ ልጆች ጋር ተያያዙ እና ምህረትዎ ሕይወታቸውን ይለውጡ",
+    "cta": "ሙያ ጀምር",
+    "stats": {
+      "children": "ልጆች ስለተሙ",
+      "donors": "ንቁ መርዳቶች",
+      "impact": "ሕይወት ተቀያይሮ"
+    },
+    "impact": {
+      "title": "ተጽዕኖዎ ጠቃሚ ነው",
+      "desc": "ሁሉም ሙያ እውነተኛ ለውጥ ይሃበል"
+    }
+  },
+  "about": {
+    "title": "ስለ ልጄ ሆይ",
+    "mission": "ዓላማችን",
+    "missionDesc": "ምህረተኛ መርዳቶችን ከአፍሪካ ውስጥ ስጋት ለሚሊሙ ልጆች ጋር ማገናኘት፣ ትምህርት፣ ጤና አጠባበቅ እና ብሩህ ወደፊት ተስፋ ማሳዘዝ።",
+    "vision": "ራዕየታችን",
+    "visionDesc": "ሁሉም ልጅ ትምህርት፣ ጤና አጠባበቅ እና ህልማቸውን ለመምታት ሥራ ሊኖር የሚገባበት ዓለም።",
+    "values": {
+      "compassion": "ምህረት",
+      "transparency": "ግልጽነት",
+      "trust": "ምሁር",
+      "empowerment": "ሰላም"
+    }
+  },
+  "donate": {
+    "title": "ለውጥ ስራ",
+    "subtitle": "መሄብ መጠን ምርጡ ምረጥ",
+    "selectAmount": "መጠን ምረጥ",
+    "recurring": "ሰርስር ዋዛ",
+    "monthly": "ወርሓዊ",
+    "once": "ሕጂ",
+    "tiers": {
+      "tier1": "ምግብ ሚዳ",
+      "tier1Desc": "አጥናት መግብ ወርሓዊ",
+      "tier2": "ትምህርት ይምጀ",
+      "tier2Desc": "ትምህርት መስቀያ ምሩር",
+      "tier3": "ጤና ምትዳ",
+      "tier3Desc": "ጤና መልክት መታ",
+      "tier4": "ሙሉ ዊቅ",
+      "tier4Desc": "ምንም ሙሉ ወርሓዊ"
+    },
+    "proceedCheckout": "ምስጢር ግዜ",
+    "or": "ወይም"
+  },
+  "footer": {
+    "description": "ምህረት ትምህርት ሕይወት ለውጥ",
+    "quickLinks": "ምቀያቅ ጉን",
+    "contact": "ግንኙነት",
+    "email": "hello@lijehoy.org",
+    "rights": "ሁሉም ሙሉ"
+  },
+  "common": {
+    "loading": "በምትሸነፍ ላይ",
+    "error": "ስህተት ተከስቷል",
+    "retry": "ደግሞ ሞክር",
+    "learnMore": "ተጨማሪ ይወቁ",
+    "donate": "ለመርዳት",
+    "back": "ወደ ኋላ"
+  }
+}

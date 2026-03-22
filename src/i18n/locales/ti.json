@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "ዋና ገጽ",
+    "about": "ስለ",
+    "donate": "መሄብ",
+    "language": "ቋንቋ"
+  },
+  "home": {
+    "title": "ልጅ ይርዳ",
+    "subtitle": "ተስፋ ምህረት ስጥ",
+    "description": "ስሌት ከአፍሪካ ወጣቶች ጋር ተያያዥ ሁኑ ተስፋና ሕይወት ለውጠዋቸው",
+    "cta": "መሄብ ጀምር",
+    "stats": {
+      "children": "ልጆች ዞሌ",
+      "donors": "ንቁ መሄብ",
+      "impact": "ሕይወት ተለውጠ"
+    },
+    "impact": {
+      "title": "ገቅ ኻላ ወቀሰ",
+      "desc": "ሩት ወደን ሱር ለውጥ ይሃበል"
+    }
+  },
+  "about": {
+    "title": "ስለ ልጄ ሆይ",
+    "mission": "ዓላማ",
+    "missionDesc": "ምህረት መሄብ ወደ ስሌት ልጆች ማገናኘት ትምህርት ጤና ተስፋ ምህረት",
+    "vision": "ራዕይ",
+    "visionDesc": "ሁሉም ልጅ ትምህርት ጤና ሕይወት ምርጥ ወሰጠ ሚሪ",
+    "values": {
+      "compassion": "ምህረት",
+      "transparency": "ግልጽነት",
+      "trust": "እምነት",
+      "empowerment": "ሰላም"
+    }
+  },
+  "donate": {
+    "title": "ለውጥ ስራ",
+    "subtitle": "መሄብ መጠን ምርጡ ምረጥ",
+    "selectAmount": "መጠን ምረጥ",
+    "recurring": "ሰርስር ዋዛ",
+    "monthly": "ወርሓዊ",
+    "once": "ሕጂ",
+    "tiers": {
+      "tier1": "ምግብ ሚዳ",
+      "tier1Desc": "አጥናት መግብ ወርሓዊ",
+      "tier2": "ትምህርት ይምጀ",
+      "tier2Desc": "ትምህርት መስቀያ ምሩር",
+      "tier3": "ጤና ምትዳ",
+      "tier3Desc": "ጤና መልክት መታ",
+      "tier4": "ሙሉ ዊቅ",
+      "tier4Desc": "ምንም ሙሉ ወርሓዊ"
+    },
+    "proceedCheckout": "ምስጢር ግዜ",
+    "or": "ወይም"
+  },
+  "footer": {
+    "description": "ምህረት ትምህርት ሕይወት ለውጥ",
+    "quickLinks": "ምቀያቅ ጉን",
+    "contact": "ግንኙነት",
+    "email": "hello@lijehoy.org",
+    "rights": "ሁሉም ሙሉ"
+  },
+  "common": {
+    "loading": "ተጓዛ ላይ",
+    "error": "ስህተት",
+    "retry": "ሞክር",
+    "learnMore": "ተወሰነ ይወቁ",
+    "donate": "መሄብ",
+    "back": "ኋላ"
+  }
+}
