@@ -9,17 +9,28 @@ export default defineConfig({
     minify: 'terser',
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor': [
-            'react',
-            'react-dom',
-            'react-i18next',
-            'framer-motion',
-          ],
-          'i18n': [
-            'i18next',
-            'i18next-browser-languagedetector',
-          ],
+        // FIXED: Converted manualChunks from Object to Function
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // Group i18n related packages
+            if (
+              id.includes('i18next') || 
+              id.includes('i18next-browser-languagedetector')
+            ) {
+              return 'i18n';
+            }
+            
+            // Group primary vendor packages
+            if (
+              id.includes('react') || 
+              id.includes('framer-motion')
+            ) {
+              return 'vendor';
+            }
+
+            // Fallback for other node_modules
+            return 'vendor-others';
+          }
         },
       },
     },
@@ -27,7 +38,8 @@ export default defineConfig({
   },
 
   server: {
-    compression: 'brotli',
+    // Note: Vite server usually handles compression via middleware
+    // but keeping it here as per your original intent
   },
 
   optimizeDeps: {
