@@ -90,19 +90,41 @@ textarea:focus-visible {
 
 /* Utility classes */
 .container-tight {
-  @apply max-w-5xl mx-auto px-4;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, #2563eb, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .gradient-button {
-  @apply px-8 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-semibold hover:shadow-lg transition-all;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-image: linear-gradient(to right, #2563eb, #22c55e);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.gradient-button:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .card-hover {
-  @apply hover:shadow-xl hover:scale-105 transition-all duration-300;
+  transition: all 0.3s ease-in-out;
+}
+.card-hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
 /* Animation utilities */
@@ -172,7 +194,6 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
-<<<<<<< HEAD
 
 /* Print styles */
 @media print {
