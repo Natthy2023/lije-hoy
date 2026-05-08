@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const ProgramsPage = memo(() => {
+const ProgramsPage = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   const programs = [
@@ -153,6 +153,7 @@ const ProgramsPage = memo(() => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setCurrentPage('donate')}
             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-bold text-lg hover:shadow-2xl transition-all"
           >
             Support Our Programs

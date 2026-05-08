@@ -12,7 +12,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const StoriesPage = memo(() => {
+const StoriesPage = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -128,8 +128,8 @@ const StoriesPage = memo(() => {
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
               className={`flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-all text-xs sm:text-sm md:text-base ${selectedCategory === cat.id
-                  ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 dark:shadow-blue-900 scale-105'
-                  : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 dark:shadow-blue-900 scale-105'
+                : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
                 }`}
             >
               {cat.icon} {cat.label}
@@ -191,6 +191,7 @@ const StoriesPage = memo(() => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      onClick={() => setCurrentPage('donate')}
                       className={`w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r ${story.color} text-white rounded-lg sm:rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-100 dark:shadow-blue-900 text-sm sm:text-base`}
                     >
                       <Heart size={16} sm:size={18} fill="currentColor" /> Support {story.name.split(' ')[0]}

@@ -30,7 +30,7 @@ const Loader = ({ onLoadComplete }) => {
           <div className="absolute inset-4 flex items-center justify-center">
             <motion.img
               src="/logo.JPG"
-              alt="Lije Hoye Logo"
+              alt="Lije Hoy Logo"
               className="w-12 h-12 rounded-full object-cover"
               animate={{ rotate: 360 }}
               transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
@@ -44,7 +44,7 @@ const Loader = ({ onLoadComplete }) => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent mb-4"
         >
-          Lije Hoye
+          Lije Hoy
         </motion.h1>
 
         <motion.p

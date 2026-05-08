@@ -45,12 +45,12 @@ const App = () => {
   }, []);
 
   const pages = {
-    home: <Home />,
-    stories: <Stories />,
-    programs: <Programs />,
-    impact: <Impact />,
+    home: <Home setCurrentPage={setCurrentPage} />,
+    stories: <Stories setCurrentPage={setCurrentPage} />,
+    programs: <Programs setCurrentPage={setCurrentPage} />,
+    impact: <Impact setCurrentPage={setCurrentPage} />,
     donate: <Donate />,
-    about: <About />,
+    about: <About setCurrentPage={setCurrentPage} />,
     privacy: <Privacy />,
     terms: <Terms />,
   };

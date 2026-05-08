@@ -13,7 +13,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-const ImpactPage = memo(() => {
+const ImpactPage = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   const stats = [
@@ -211,6 +211,7 @@ const ImpactPage = memo(() => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setCurrentPage('donate')}
             className="px-10 py-5 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-bold text-xl hover:shadow-2xl transition-all flex items-center gap-3 mx-auto"
           >
             <Heart size={22} fill="currentColor" />

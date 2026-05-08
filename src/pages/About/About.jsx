@@ -26,7 +26,7 @@ import {
   Stethoscope
 } from 'lucide-react';
 
-const AboutPage = memo(() => {
+const AboutPage = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   const cofounders = [
@@ -124,7 +124,7 @@ const AboutPage = memo(() => {
             </h2>
             <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
               <p>
-                <span className="font-bold text-blue-600">Lije Hoye</span> (meaning "My Child" in Amharic) was founded in 2019 to bridge the gap in disability care across the continent.
+                <span className="font-bold text-blue-600">Lije Hoy</span> (meaning "My Child" in Amharic) was founded in 2019 to bridge the gap in disability care across the continent.
               </p>
               <p>
                 Starting with just five children in Ethiopia, we have expanded to support over <strong>1,200 children</strong> across <strong>45 countries</strong>, transforming local communities through inclusive therapy and specialized education.
@@ -218,10 +218,16 @@ const AboutPage = memo(() => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 sm:mb-6">Want to be part of the story?</h2>
           <p className="text-blue-50 mb-6 sm:mb-10 text-base sm:text-lg opacity-90">Join our movement to provide every child with a chance to thrive.</p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-            <button className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg text-sm sm:text-base">
+            <button
+              onClick={() => setCurrentPage('donate')}
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg text-sm sm:text-base"
+            >
               Support Our Mission
             </button>
-            <button className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-transparent border-2 border-white/50 text-white rounded-full font-bold hover:bg-white/10 transition-all text-sm sm:text-base">
+            <button
+              onClick={() => setCurrentPage('programs')}
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-transparent border-2 border-white/50 text-white rounded-full font-bold hover:bg-white/10 transition-all text-sm sm:text-base"
+            >
               Volunteer
             </button>
           </div>

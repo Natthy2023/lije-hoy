@@ -75,7 +75,7 @@ const Footer = memo(({ setCurrentPage }) => {
           {/* Brand Section */}
           <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.JPG" alt="Lije Hoye Logo" className="h-12 sm:h-16 w-12 sm:w-16 rounded-full object-cover" />
+              <img src="/logo.JPG" alt="Lije Hoy Logo" className="h-12 sm:h-16 w-12 sm:w-16 rounded-full object-cover" />
             </div>
             <p className="text-gray-400 leading-relaxed text-xs sm:text-sm">
               Empowering African children with disabilities, autism, and health challenges through compassion, education, and opportunity.
@@ -200,7 +200,7 @@ const Footer = memo(({ setCurrentPage }) => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
             {/* Copyright */}
             <div className="text-gray-500 text-xs sm:text-sm text-center sm:text-left order-2 sm:order-1">
-              <p>© {currentYear} <span className="text-gray-200 dark:text-gray-300 font-semibold">Lije Hoye</span>. Made with ❤️ for every child.</p>
+              <p>© {currentYear} <span className="text-gray-200 dark:text-gray-300 font-semibold">Lije Hoy</span>. Made with ❤️ for every child.</p>
             </div>
 
             {/* Legal */}

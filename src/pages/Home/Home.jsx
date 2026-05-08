@@ -23,7 +23,7 @@ const VideoImpactSection = memo(() => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const [isOpen, setIsOpen] = useState(false);
 
-  // Placeholder video ID - You can replace this with the actual Lije Hoye video ID later
+  // Placeholder video ID - You can replace this with the actual Lije Hoy video ID later
   const videoId = "KLXUFl3SqbM";
 
   return (
@@ -42,7 +42,7 @@ const VideoImpactSection = memo(() => {
           transition={{ delay: 0.1 }}
           className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
         >
-          Watch how Lije Hoye is transforming lives and creating inclusive communities across Africa.
+          Watch how Lije Hoy is transforming lives and creating inclusive communities across Africa.
         </motion.p>
 
         {/* Video Thumbnail/Trigger */}
@@ -111,7 +111,7 @@ const VideoImpactSection = memo(() => {
   );
 });
 
-const HeroSection = memo(() => {
+const HeroSection = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
 
   const containerVariants = {
@@ -173,6 +173,7 @@ const HeroSection = memo(() => {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.25)" }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setCurrentPage('donate')}
               className="px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-bold text-lg sm:text-xl shadow-2xl transition-all flex items-center justify-center gap-3"
             >
               <Heart className="w-5 h-5 sm:w-6 sm:h-6 fill-current" /> Support a Child Today
@@ -181,6 +182,7 @@ const HeroSection = memo(() => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setCurrentPage('stories')}
               className="px-8 sm:px-10 py-4 sm:py-5 border-4 border-transparent bg-gradient-to-r from-blue-600 to-green-500 text-gray-900 rounded-full font-bold text-lg sm:text-xl shadow-xl flex items-center justify-center gap-3 relative overflow-hidden group"
             >
               <span className="absolute inset-0 bg-white/90 dark:bg-gray-100 m-[2px] rounded-full flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-gray-200 transition-colors backdrop-blur-sm">
@@ -261,7 +263,7 @@ const PhotoGallery = memo(() => {
   );
 });
 
-const FeaturedChildren = memo(() => {
+const FeaturedChildren = memo(({ setCurrentPage }) => {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   const children = [
@@ -337,6 +339,7 @@ const FeaturedChildren = memo(() => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => setCurrentPage('donate')}
                 className={`w-full py-3 sm:py-4 ${child.color} text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-sm sm:text-base`}
               >
                 <Heart className="w-4 h-4 sm:w-5 sm:h-5" /> Support {child.name}
@@ -402,12 +405,12 @@ const ImpactStats = memo(() => {
   );
 });
 
-const Home = memo(() => (
+const Home = memo(({ setCurrentPage }) => (
   <div className="min-h-screen font-sans">
-    <HeroSection />
+    <HeroSection setCurrentPage={setCurrentPage} />
     <PhotoGallery />
     <VideoImpactSection />
-    <FeaturedChildren />
+    <FeaturedChildren setCurrentPage={setCurrentPage} />
     <ImpactStats />
   </div>
 ));
