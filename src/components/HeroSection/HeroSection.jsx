@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useInView } from 'react-intersection-observer';
 // eslint-disable-next-line no-unused-vars
-import  {motion}  from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HeroSection = memo(({ onDonate }) => {
   const { t } = useTranslation();
@@ -28,7 +28,7 @@ const HeroSection = memo(({ onDonate }) => {
       className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-green-50" />
-      
+
       <motion.div
         animate={{ x: [0, 30, 0], y: [0, -40, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
@@ -63,9 +63,9 @@ const HeroSection = memo(({ onDonate }) => {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto"
+            className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            {t('home.description')}
+            Empowering families, supporting special needs children, and promoting mental well-being through counseling, therapy, and community programs in Addis Ababa.
           </motion.p>
 
           <motion.div

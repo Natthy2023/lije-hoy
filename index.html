@@ -24,6 +24,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme === 'system' ? (prefersDark ? 'dark' : 'light') : savedTheme;
+        document.documentElement.classList.remove('light', 'dark');
+        document.body.classList.remove('light', 'dark');
+        document.documentElement.classList.add(initialTheme);
+        document.body.classList.add(initialTheme);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

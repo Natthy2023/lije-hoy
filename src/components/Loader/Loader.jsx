@@ -16,7 +16,7 @@ const Loader = ({ onLoadComplete }) => {
       className="fixed inset-0 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 flex items-center justify-center z-50"
     >
       <div className="text-center">
-        <div className="relative w-20 h-20 mx-auto mb-8">
+        <div className="relative w-24 h-24 mx-auto mb-8">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
@@ -27,6 +27,15 @@ const Loader = ({ onLoadComplete }) => {
             transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
             className="absolute inset-2 rounded-full border-4 border-transparent border-b-green-400 border-l-blue-300"
           />
+          <div className="absolute inset-4 flex items-center justify-center">
+            <motion.img
+              src="/logo.JPG"
+              alt="Lije Hoye Logo"
+              className="w-12 h-12 rounded-full object-cover"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+            />
+          </div>
         </div>
 
         <motion.h1

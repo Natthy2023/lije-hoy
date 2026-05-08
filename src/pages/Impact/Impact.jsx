@@ -2,13 +2,13 @@
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
-  Globe2, 
-  GraduationCap, 
-  HandHeart, 
-  BookOpen, 
-  Activity, 
+import {
+  Users,
+  Globe2,
+  GraduationCap,
+  HandHeart,
+  BookOpen,
+  Activity,
   Heart,
   CheckCircle2
 } from 'lucide-react';
@@ -76,17 +76,17 @@ const ImpactPage = memo(() => {
   };
 
   return (
-    <section ref={ref} className="min-h-screen pt-32 pb-20 px-4 bg-gradient-to-b from-white to-blue-50">
+    <section ref={ref} className="min-h-screen pt-32 pb-20 px-4 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Our Impact</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">Our Impact</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Real results from real support – see how your donations change lives.
           </p>
         </motion.div>
@@ -99,7 +99,7 @@ const ImpactPage = memo(() => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: idx * 0.1 }}
-              className="p-6 bg-white rounded-3xl text-center group overflow-hidden shadow-lg border border-gray-100"
+              className="p-6 bg-white dark:bg-gray-800 rounded-3xl text-center group overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700"
             >
               <div className="text-blue-500 mb-6 flex justify-center">
                 {stat.icon}
@@ -115,7 +115,7 @@ const ImpactPage = memo(() => {
                   </motion.span>
                 ) : "0"}
               </div>
-              <p className="text-sm font-bold text-gray-600 uppercase tracking-wide">{stat.label}</p>
+              <p className="text-sm font-bold text-gray-600 dark:text-gray-400 uppercase tracking-wide">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -132,7 +132,7 @@ const ImpactPage = memo(() => {
               key={idx}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-700 overflow-hidden"
             >
               {/* Image Section with Iconic Overlay */}
               <div className="relative h-56 overflow-hidden">
@@ -147,12 +147,12 @@ const ImpactPage = memo(() => {
               </div>
 
               <div className="p-8 pt-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-8">{outcome.category}</h3>
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">{outcome.category}</h3>
                 <ul className="space-y-4">
                   {outcome.results.map((result, ridx) => (
                     <li key={ridx} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{result}</span>
+                      <span className="text-gray-700 dark:text-gray-300">{result}</span>
                     </li>
                   ))}
                 </ul>
@@ -168,7 +168,7 @@ const ImpactPage = memo(() => {
           className="bg-gradient-to-r from-blue-600 to-green-500 rounded-3xl p-10 md:p-16 text-white overflow-hidden relative"
         >
           <h2 className="text-4xl font-bold mb-12 text-center">Stories of Resilience</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {[
               {
@@ -213,7 +213,7 @@ const ImpactPage = memo(() => {
             whileTap={{ scale: 0.95 }}
             className="px-10 py-5 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-bold text-xl hover:shadow-2xl transition-all flex items-center gap-3 mx-auto"
           >
-            <Heart size={22} fill="currentColor" /> 
+            <Heart size={22} fill="currentColor" />
             Support a Child Today
           </motion.button>
         </motion.div>

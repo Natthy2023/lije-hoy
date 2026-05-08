@@ -2,12 +2,12 @@
 import React, { memo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
-  Brain, 
-  Accessibility, 
-  Eye, 
-  CheckCircle2, 
+import {
+  Users,
+  Brain,
+  Accessibility,
+  Eye,
+  CheckCircle2,
   Heart,
   Sparkles
 } from 'lucide-react';
@@ -98,40 +98,39 @@ const StoriesPage = memo(() => {
     { id: 'sensory', label: 'Sensory', icon: <Eye size={18} /> },
   ];
 
-  const filtered = selectedCategory === 'all' 
-    ? stories 
+  const filtered = selectedCategory === 'all'
+    ? stories
     : stories.filter(s => s.category === selectedCategory);
 
   return (
-    <section ref={ref} className="min-h-screen pt-32 pb-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        
+    <section ref={ref} className="min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">
-            <Sparkles size={16} /> HEROES OF HOPE
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-bold text-xs sm:text-sm mb-4">
+            <Sparkles size={14} sm:size={16} /> HEROES OF HOPE
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Children Stories</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">Children Stories</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-4">
             Real stories of courage from Ethiopia and across Africa. Each child's journey is a testament to the power of support.
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap gap-4 justify-center mb-16">
+        <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center mb-12 sm:mb-16 px-4">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-                selectedCategory === cat.id
-                  ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 scale-105'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-              }`}
+              className={`flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-all text-xs sm:text-sm md:text-base ${selectedCategory === cat.id
+                  ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 dark:shadow-blue-900 scale-105'
+                  : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                }`}
             >
               {cat.icon} {cat.label}
             </button>
@@ -139,7 +138,7 @@ const StoriesPage = memo(() => {
         </div>
 
         {/* Stories Grid */}
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
           <AnimatePresence mode="popLayout">
             {filtered.map((story) => (
               <motion.div
@@ -149,52 +148,52 @@ const StoriesPage = memo(() => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-gray-100 group"
+                className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
                 {/* Image Section */}
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={story.image} 
-                    alt={story.name} 
+                <div className="relative h-56 sm:h-64 overflow-hidden">
+                  <img
+                    src={story.image}
+                    alt={story.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent`} />
-                  <div className="absolute bottom-4 left-6 text-white">
-                    <p className="text-sm font-medium opacity-80">Age {story.age}</p>
-                    <h3 className="text-2xl font-bold">{story.name.split('-')[0]}</h3>
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent`} />
+                  <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 text-white">
+                    <p className="text-xs sm:text-sm font-medium opacity-90">Age {story.age}</p>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">{story.name.split('-')[0]}</h3>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
-                  <p className="text-gray-600 mb-6 leading-relaxed italic">
+                <div className="p-5 sm:p-6 md:p-8">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 leading-relaxed italic text-sm sm:text-base">
                     "{story.fullStory}"
                   </p>
 
-                  <div className="space-y-4 mb-8">
-                    <h4 className="font-bold text-gray-900 flex items-center gap-2">
-                      <CheckCircle2 className="text-green-500" size={18} /> Key Achievements
+                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                    <h4 className="font-bold text-gray-900 dark:text-white flex items-center gap-2 text-sm sm:text-base">
+                      <CheckCircle2 className="text-green-500" size={16} sm:size={18} /> Key Achievements
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {story.achievements.map((item, idx) => (
-                        <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                        <span key={idx} className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                           {item}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 sm:pt-6 border-t border-gray-100 dark:border-gray-700">
                     <div>
-                      <p className="text-xs text-gray-500 uppercase font-bold tracking-wider">Support Goal</p>
-                      <p className="text-2xl font-black text-blue-600">${story.monthlyNeeds}<span className="text-sm font-normal text-gray-400">/mo</span></p>
+                      <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 uppercase font-bold tracking-wider">Support Goal</p>
+                      <p className="text-xl sm:text-2xl font-black text-blue-600">${story.monthlyNeeds}<span className="text-xs sm:text-sm font-normal text-gray-400">/mo</span></p>
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`px-6 py-3 bg-gradient-to-r ${story.color} text-white rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-blue-100`}
+                      className={`w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r ${story.color} text-white rounded-lg sm:rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-100 dark:shadow-blue-900 text-sm sm:text-base`}
                     >
-                      <Heart size={18} fill="currentColor" /> Support {story.name.split(' ')[0]}
+                      <Heart size={16} sm:size={18} fill="currentColor" /> Support {story.name.split(' ')[0]}
                     </motion.button>
                   </div>
                 </div>

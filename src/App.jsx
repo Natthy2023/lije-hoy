@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, lazy, Suspense, useCallback } from 'react';
+import React, { useState, lazy, Suspense, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation/Navigation';
 import Loader from './components/Loader/Loader';
 import Footer from './components/Footer/Footer';
+import useThemeStore from './store/themeStore';
 import './index.css';
 
 // Lazy load pages
@@ -13,6 +14,8 @@ const Programs = lazy(() => import('./pages/Programs/Programs'));
 const Impact = lazy(() => import('./pages/Impact/Impact'));
 const Donate = lazy(() => import('./pages/Donate/Donate'));
 const About = lazy(() => import('./pages/About/About'));
+const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
+const Terms = lazy(() => import('./pages/Terms/Terms'));
 
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -25,8 +28,17 @@ const PageLoader = () => (
 );
 
 const App = () => {
+  const { initializeTheme } = useThemeStore();
   const [currentPage, setCurrentPage] = useState('home');
   const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    initializeTheme();
+  }, [initializeTheme]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
 
   const handleLoadComplete = useCallback(() => {
     setShowLoader(false);
@@ -39,12 +51,14 @@ const App = () => {
     impact: <Impact />,
     donate: <Donate />,
     about: <About />,
+    privacy: <Privacy />,
+    terms: <Terms />,
   };
 
   return (
     <>
       {showLoader && <Loader onLoadComplete={handleLoadComplete} />}
-      
+
       <AnimatePresence mode="wait">
         {!showLoader && (
           <motion.div
@@ -52,16 +66,16 @@ const App = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen flex flex-col bg-white"
+            className="min-h-screen flex flex-col bg-white dark:bg-gray-900"
           >
             <Navigation setCurrentPage={setCurrentPage} currentPage={currentPage} />
-            
+
             <main className="flex-grow">
               <Suspense fallback={<PageLoader />}>
                 {pages[currentPage]}
               </Suspense>
             </main>
-            
+
             <Footer setCurrentPage={setCurrentPage} />
           </motion.div>
         )}
