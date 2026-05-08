@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import useThemeStore from '../../store/themeStore';
+=======
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
 
 const Navigation = ({ setCurrentPage, currentPage }) => {
   const { theme } = useThemeStore();
@@ -94,17 +97,29 @@ const Navigation = ({ setCurrentPage, currentPage }) => {
             ))}
           </div>
 
+<<<<<<< HEAD
           <div className="flex items-center gap-2 sm:gap-4">
             <LanguageSelector />
             <ThemeToggle />
+=======
+          <div className="flex items-center gap-4">
+            {/* UPDATED: Improved Mobile Menu Button visibility and color */}
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
               className="lg:hidden p-2 sm:p-3 rounded-xl bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-lg hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Toggle menu"
             >
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+=======
+              className="md:hidden p-2 rounded-lg bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-lg focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -124,6 +139,7 @@ const Navigation = ({ setCurrentPage, currentPage }) => {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
             >
+<<<<<<< HEAD
               <div className="py-4 sm:py-6 space-y-1 sm:space-y-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-2xl mt-2 shadow-2xl border border-gray-100 dark:border-gray-700">
                 {navItems.map((item) => (
                   <motion.button
@@ -140,6 +156,21 @@ const Navigation = ({ setCurrentPage, currentPage }) => {
                   </motion.button>
                 ))}
               </div>
+=======
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`block w-full text-left px-4 py-2 rounded-lg transition-colors font-semibold ${
+                    currentPage === item.id
+                      ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
             </motion.div>
           )}
         </AnimatePresence>

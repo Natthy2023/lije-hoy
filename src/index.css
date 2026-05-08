@@ -8,16 +8,27 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
 html, body {
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
 }
 
+<<<<<<< HEAD
 #root {
   max-width: 100%;
   overflow-x: hidden;
 }
+=======
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
 
 html {
   scroll-behavior: smooth;
@@ -172,6 +183,7 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+<<<<<<< HEAD
 
 /* Print styles */
 @media print {
@@ -198,3 +210,5 @@ body {
 .skiptranslate {
   display: none !important;
 }
+=======
+>>>>>>> 57e59a0fa881a6d0020e3a0965e12f1bde2a5b9a
